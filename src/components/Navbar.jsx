@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineHome, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
+import { routes } from '../text/routes';
 
 
 
@@ -18,27 +19,27 @@ const Navbar = () => {
     {
       title: "Home",
       icon: AiOutlineHome,
-      address: "#main"
+      address: routes.home
     },
     {
       title: "Work",
       icon: AiOutlineProject,
-      address: "#work"
+      address: routes.home
     },
     {
       title: "Projects",
       icon: GrProjects,
-      address: "#projects"
+      address: routes.project
     },
     {
       title: "Resume",
       icon: BsPerson,
-      address: "#resume"
+      address: routes.resume
     },
     {
       title: "Contact",
       icon: AiOutlineMail,
-      address: "#contact"
+      address: routes.contact
     },
   ]
 
@@ -60,7 +61,7 @@ const Navbar = () => {
           </div>
           :
           <div className='md:block hidden'>
-            <div className='absolue left-8 h-screen fixed bg-white/90 flex flex-col justify-center items-start'>
+            <div className='fixed left-8 h-screen flex flex-col justify-center items-start'>
               {
                 navLinkList.map((link, i) =>
                   <a href={link.address} key={i} className='w-auto flex justify-left items-start rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-150'>
