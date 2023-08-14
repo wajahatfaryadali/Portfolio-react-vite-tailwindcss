@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AiOutlineMenu, AiOutlineHome, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineHome, AiOutlineProject, AiOutlineMail, AiOutlineLink, AiOutlineClose } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import { routes } from '../text/routes';
@@ -12,7 +12,6 @@ const Navbar = () => {
 
   const handleNav = () => {
     setNav(!nav)
-    console.log("handleNav")
   }
 
   const navLinkList = [
@@ -32,26 +31,30 @@ const Navbar = () => {
       address: routes.project
     },
     {
-      title: "Resume",
-      icon: BsPerson,
-      address: routes.resume
-    },
-    {
       title: "Contact",
       icon: AiOutlineMail,
       address: routes.contact
     },
+    {
+      title: "Links",
+      icon: AiOutlineLink,
+      address: routes.links
+    },
+
   ]
 
   return (
     <>
-      <AiOutlineMenu className='absolute right-4 top-4 z-[99] cursor-pointer md:hidden' size={22} onClick={handleNav} />
+      {nav ? <AiOutlineClose className='fixed right-4 top-4 z-[99] cursor-pointer md:hidden hover:scale-110 duration-100' size={22} onClick={handleNav} />
+        :
+        <AiOutlineMenu className='fixed right-4 top-4 z-[99] cursor-pointer md:hidden hover:scale-110 duration-100' size={22} onClick={handleNav} />}
+
       {
         nav ?
           <div className='w-full h-screen fixed bg-white/90 flex flex-col justify-center items-center z-20'>
             {
               navLinkList.map((link, i) =>
-                <a href={`#${link.address}`} key={i} className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-150'>
+                <a href={`#${link.address}`} onClick={handleNav} key={i} className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-150'>
                   <link.icon size={20} />
                   <span className='pl-4'>{link.title}</span>
                 </a>

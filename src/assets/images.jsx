@@ -1,3 +1,4 @@
+
 export const IMAGES = {
     heroImg2: new URL('./hero_img_2.JPG', import.meta.url).href,
     nature_1: new URL('./nature_1.jpg', import.meta.url).href,

@@ -5,8 +5,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 
 
-
-
 const Main = () => {
 
     const linkList = [

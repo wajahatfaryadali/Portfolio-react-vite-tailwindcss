@@ -30,6 +30,7 @@ const Work = () => {
             <h1 className='font-bold font-mono text-center text-2xl md:text-4xl text-gray-800 pb-4'>Work</h1>
             {data.map((item, index) =>
                 <WorkItem
+                    key={index}
                     index={index}
                     year={item.year}
                     title={item.title}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { routes } from '../text/routes';
 import ProjectItem from "./subComponents/ProjectItem";
 import { IMAGES } from '../assets/images';
@@ -32,18 +32,21 @@ const Projects = () => {
     ]
 
     return (
-        <div id={routes.project} className='bg-gray-50 md:pl-20 p-4 py-16'>
-            <div className='max-w-[1040px] mx-auto text-center text-gray-800'>
+        <div id={routes.project} className='bg-gray-50 py-16'>
+            <div className='max-w-[1040px] mx-auto text-center text-gray-800 p-4 md:pl-20'>
                 <h1 className='text-2xl md:text-4xl font-mono font-bold pb-4 md:pb-12'>Projects</h1>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-12 justify-center items-center'>
                     {projects?.map((item, index) =>
-                        <ProjectItem
-                            index={index}
-                            title={item.title}
-                            imgSrc={item.imgSrc}
-                            discription={item.discription}
-                            linkUrl={item.linkUrl}
-                        />
+                        
+                            <ProjectItem
+                                key={index}
+                                index={index}
+                                title={item.title}
+                                imgSrc={item.imgSrc}
+                                discription={item.discription}
+                                linkUrl={item.linkUrl}
+                            />
+                        
                     )}
                 </div>
             </div>
