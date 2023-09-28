@@ -37,7 +37,7 @@ const Main = () => {
 
     return (
         <div id={routes.home}>
-            <img src={IMAGES.heroImg2} alt="/img" className='w-full h-screen object-cover' />
+            <img src={IMAGES.mountain} alt="/img" className='w-full h-screen object-cover' />
             <div className='absolute top-0 w-full h-screen bg-white/50 z-[1]'>
                 <div className='max-w-[700px] m-auto w-full h-screen flex flex-col justify-center text-center'>
                     <h1 className='font-mono font-semibold text-2xl md:text-4xl text-gray-800'>Hello! I am Wajahat Ali.</h1>
