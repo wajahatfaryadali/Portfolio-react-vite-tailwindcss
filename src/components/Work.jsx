@@ -8,13 +8,13 @@ const Work = () => {
         {
             year: 2021,
             title: "Software Engineer Internee",
-            duration: "1 year",
+            duration: "6 months",
             details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab in voluptate tempora velit! Deleniti autem quae doloribus, excepturi ratione eaque vitae nobis quidem consequatur officia sunt vero commodi rerum."
         },
         {
             year: 2022,
             title: "Junior Developer",
-            duration: "1 year",
+            duration: "6 months",
             details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab in voluptate tempora velit! Deleniti autem quae doloribus, excepturi ratione eaque vitae nobis quidem consequatur officia sunt vero commodi rerum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum iure quo."
         },
         {

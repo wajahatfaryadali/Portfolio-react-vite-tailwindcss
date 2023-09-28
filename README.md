@@ -4,7 +4,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## This is Portfolio app
 
-This Project is Live on vercel here is the [Link](https://wfa-portfolio-app.vercel.app/)
+This Project is Live on vercel here is the [Link](https://wfa-portfolio-vite-react-tailwind.vercel.app/)
 
 Currently, two official plugins are available:
 
