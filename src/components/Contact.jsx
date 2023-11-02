@@ -8,6 +8,7 @@ import facebook from "../assets/social_icons/facebook.png"
 import instagram from "../assets/social_icons/instagram.png"
 import linkedin from "../assets/social_icons/linkedin.png"
 import gmail from "../assets/social_icons/gmail.png"
+import toaster from '../_utilities/toaster'
 
 const Contact = () => {
 
@@ -122,8 +123,9 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(event)
-        alert("Your Message Has been sent to Wajahat!")
+        // console.log(event)
+        toaster.show("error", "Still working on it!", 3000)
+        // alert("Your Message Has been sent to Wajahat!")
         setFormValue({
             name: "",
             phone: "",
